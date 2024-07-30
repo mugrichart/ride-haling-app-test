@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TROSKI</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>  -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script type="module" src="./index.js"></script>
+</head>
+<body>
+    <div id="background-map"></div>
+
+    <div class="head">
+        <div class="logo"><h1><a href="/home">TROSKI</a></h1></div>
+        <div class="search">
+            <form class="search-bar">
+                <input class="search-bar--input" placeholder="What bus are you taking?" type="text">
+                <input class="search-bar--submit" type="submit">
+            </form>
+            <div class="search-results">
+                <div class="search-results--head search-results--head-hide">
+                    <div class="search-results--bus-id">From</div>
+                    <div class="search-results--bus-arrival-time">To</div>
+                    <!-- <div class="search-results--bus-booking">Book a bus</div> -->
+                </div>
+                <div class="search-results--body search-results--body-hide">
+                    <!-- <div class="search-results--item"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <p>Booking a seat means committing to the bus! Not showing up affects your ability to get rides</p>
+        <div class="header">
+            <span id="bus-plate">Bus Plate: </span><button>Book a seat</button>
+        </div>
+        <div class="stats">
+            <div class="header">
+                <span>From</span><span>To</span><span>Distance</span><span>Arrival</span>
+            </div>
+            <div class="content">
+                <div class="origin">
+                    <span>Bus</span>
+                    <span>You</span>
+                    <!-- <span>Bus Stop</span> -->
+                </div>
+                <div class="destination">
+                    <span>Bus Stop</span>
+                    <span>Bus Stop</span>
+                    <span>Destination</span>
+                </div>
+                <div class="distance">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                </div>
+                <div class="arrival">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <audio id="beepSound" src="../assets/sounds/bip sound.mp3" preload="auto"></audio>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh--gm4WfeXJ0-ENwK383cK&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+</body>
+</html>

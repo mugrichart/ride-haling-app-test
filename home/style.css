@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#background-map {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+}
+
+.head {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+   
+}
+
+.logo {
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(38, 37, 37);
+    color: white;
+}
+
+.search {
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.search-bar {
+    height: 70px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.search-bar--input {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.search-bar--submit {
+    position: absolute;
+    right: 30px;
+    height: 30px;
+    
+    font-weight: 500;
+    margin: 10px 0;
+    background-color: rgb(154, 196, 231);
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.search-results--head, .search-results--item {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    background: rgb(255, 255, 255)
+}
+
+.search-results--head {
+    font-weight: 900;
+}
+
+.search-results--item:hover {
+    background-color: rgb(222, 243, 236);
+    cursor: pointer;
+}
+
+.search-results--item button {
+    background-color: rgb(188, 241, 188);
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.search-results--head-hide, .search-results--body-hide {
+    height: 0;
+    overflow: hidden;
+}
+
+/* This is for the footer */
+.foot {
+    position: absolute;
+    width: 100vw;
+    
+    bottom: 0;
+    background-color: rgba(38, 37, 37, .3);
+    border-top: 5px groove rgba(229, 229, 105, 0.543);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.foot > p {
+    padding: 2px 5px;
+    font-size: small;
+    background-color: rgb(229, 229, 105);
+    
+}
+
+.foot > .header {
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot > .header * {
+    display: inline-block;
+    padding: 5px;
+    
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #4caf4f7c;
+    color: #317459;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+.foot button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+
+.foot > .stats .header, .foot .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 5px;
+}
+
+.foot > .stats .header span {
+    background-color: rgb(249, 249, 249);
+    padding: 2px 5px;
+    box-shadow: 0 0 5px rgb(121, 161, 176);
+    border-radius: 10px;
+    border: 2px ridge rgba(72, 164, 198, 0.284);
+}
+
+.foot  .stats .header div, .foot .content div {
+    display: flex;
+    flex-direction: column;
+    width:24.5%;
+}
+
+.foot .content div span {
+    background-color: rgb(36 82 92 / 71%);
+    display: flex;
+    margin: 2px 0;
+    flex-direction: column;
+    color: #f6b705;
+    box-shadow: 0 0 5px rgb(121, 161, 176);
+    border-radius: 5px;
+    border: 2px ridge rgba(72, 198, 164, 0.496);
+}
+
+/* when the stats are filled */
+@keyframes pop {
+    0% {
+      transform: scale(1);
+      color: #f6b705; 
+      background-color: rgb(36 82 92 / 71%); 
+    }
+    50% {
+      transform: scale(1.2);
+      color: rgb(36 82 92 / 71%); 
+      background-color: #f6b705
+    }
+    100% {
+      transform: scale(1);
+      color: #f6b705; 
+      background-color: rgb(36 82 92 / 71%); 
+    }
+  }
+  
+  .pop {
+    animation: pop 20s;
+  }
+  
+
+  
